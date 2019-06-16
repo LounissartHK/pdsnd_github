@@ -169,7 +169,9 @@ def station_stats(df):
 
 
 def trip_duration_stats(df):
-    """Displays statistics on the total and average trip duration."""
+    """Displays statistics on the total and average trip duration.
+
+    Total Travel Time / Mean Travel Time"""
 
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
@@ -210,7 +212,9 @@ def raw_data(df):
                           j += 5
             break
 def user_stats(df):
-    """Displays statistics on bikeshare users."""
+    """Displays statistics on bikeshare users.
+
+    Count of User Type / Earliest, Most recent and most common year of birth """
 
     print('\nCalculating User Stats...\n')
     start_time = time.time()
