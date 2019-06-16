@@ -1,8 +1,10 @@
-### Date created
-Include the date you created this project and README file.
+### Creation Date:
 
-### Project Title
-Replace the Project Title
+June 16th 2019
+
+### Title:
+
+Explore US Bikeshare Data
 
 ### Description
 Describe what your project is about and what it does
@@ -12,4 +14,3 @@ Include the files used
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
