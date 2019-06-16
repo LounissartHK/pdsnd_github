@@ -23,15 +23,15 @@ def get_filters():
             print("Your input is incorrect!")
         else:
             break
-            
+
     if str(city_number) == '1':
         city = 'chicago'
     elif str(city_number) == '2':
         city = 'new york city'
     elif str(city_number) == '3':
         city = 'washington'
-        
-        
+
+
     # TO DO: get user input for month (all, january, february, ... , june)
     while True:
         month_number = input("Enter the number of the month you would like to explore? For Example for February type 2, Data available is only from Janaury to June (1 to 6). For all months just press enter!")
@@ -39,7 +39,7 @@ def get_filters():
             print("Your input is incorrect!")
         else:
             break
-            
+
     if str(month_number) == '1':
         month = 'january'
     elif str(month_number) == '2':
@@ -53,8 +53,8 @@ def get_filters():
     elif str(month_number) == '6':
         month = 'june'
     elif str(month_number) == '':
-        month = 'all' 
-    
+        month = 'all'
+
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day_number = input("Enter the number of the day you would like to explore? For Example for Wednesday type 3. For all days just press enter!")
@@ -62,7 +62,7 @@ def get_filters():
             print("Your input is incorrect!")
         else:
             break
-            
+
     if str(day_number) == '1':
         day = 'monday'
     elif str(day_number) == '2':
@@ -78,7 +78,7 @@ def get_filters():
     elif str(day_number) == '7':
         day = 'sunday'
     elif str(day_number) == '':
-        day = 'all' 
+        day = 'all'
 
     print('-'*40)
     return city, month, day
@@ -105,7 +105,7 @@ def load_data(city, month, day):
     df['month'] = df['Start Time'].dt.month
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
- 
+
 
     # filter by month if applicable
     if month != 'all':
@@ -175,12 +175,12 @@ def trip_duration_stats(df):
     start_time = time.time()
 
     # TO DO: display total travel time
-    
+
     total_trip_duration = df['Trip Duration'].sum()
     print("The Total Travel Time is roughly %d hours" % round(total_trip_duration/3600,0))
 
     # TO DO: display mean travel time
-    
+
     mean_trip_duration = df['Trip Duration'].mean()
     print("The Mean Travel Time is roughly %d minutes" % round(mean_trip_duration/60,0))
 
@@ -188,6 +188,7 @@ def trip_duration_stats(df):
     print('-'*40)
 
 def raw_data(df):
+    """Offering the user to see the raw data"""
   while True:
             raw_data = input('\nWould you like to see the raw data? Enter yes or no.\n')
             if raw_data not in ('yes', 'no'):
@@ -248,11 +249,11 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         raw_data(df)
-     
+
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-            
+
 
 if __name__ == "__main__":
 	main()
