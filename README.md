@@ -16,4 +16,4 @@ new_york_city.csv > Data File
 washington.csv > Data File
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Thank you Udacity for teaching these new skills
